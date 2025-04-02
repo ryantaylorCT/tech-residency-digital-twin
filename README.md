@@ -1,4 +1,4 @@
-# Tech Residency Digital Twin (Without Redis)
+# Tech Residency Digital Twin
 
 This repository provides a simple digital twin environment that simulates a financial industry tech stack using Docker Compose. It includes a Flask app and a PostgreSQL database.
 
