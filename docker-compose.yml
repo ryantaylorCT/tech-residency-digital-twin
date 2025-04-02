@@ -1,0 +1,22 @@
+version: '3.9'
+
+services:
+  web:
+    build: ./app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    environment:
+      POSTGRES_USER: "user"
+      POSTGRES_PASSWORD: "pass"
+      POSTGRES_DB: "finance_db"
+
+  db:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: "user"
+      POSTGRES_PASSWORD: "pass"
+      POSTGRES_DB: "finance_db"
+    ports:
+      - "5432:5432"
